@@ -15,6 +15,8 @@ namespace modul5_1302204031
 
         public SayaTubeVideo(string v)
         {
+            if (v.Length > 200 && v == null)
+                throw new Exception("Judul kelebihan");
             title = v;
             Random generate = new Random();
             this.id = generate.Next(0, 100000);
@@ -22,8 +24,11 @@ namespace modul5_1302204031
         }
 
         public void IncreaseplayCount(int angka)
+            
         {
-            playCount = playCount + angka;
+            if (angka > 25000000 && angka < 0)
+                throw new Exception("play count kelebihan");
+            playCount = checked(playCount + angka);
         }
 
         public int GetPlaycount()

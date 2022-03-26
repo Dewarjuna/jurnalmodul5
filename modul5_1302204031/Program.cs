@@ -14,7 +14,7 @@ namespace modul5_1302204031
             {
                 SayaTubeUSer user = new SayaTubeUSer("Dewa");
                 SayaTubeVideo video = new SayaTubeVideo("Review Film Interstellar oleh Dewa");
-                //video.IncreaseplayCount(20);
+                video.IncreaseplayCount(20);
                 user.addVideo(video);
                 SayaTubeVideo video2 = new SayaTubeVideo("Review Film The Martian oleh Dewa");
                 user.addVideo(video2);
